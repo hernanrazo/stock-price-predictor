@@ -1,4 +1,4 @@
-An attempt at using sckit learn to predict stock prices. currently a work in progress. not sure if anything accurate or useful will come out of this.
+An attempt at using sckit learn to predict stock prices. This example uses data from Amazon's stock prices from 5/15/97 to 6/1/18. currently a work in progress. not sure if anything accurate or useful will come out of this. 
 
 
 Sources:
