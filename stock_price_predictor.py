@@ -6,24 +6,13 @@ import pandas as pd
 import numpy as np
 import csv
 
-# style.use('ggplot')
-
-dates = []
-closing_price = []
+style.use('ggplot')
  
 df = pd.read_csv('/Users/hernanrazo/pythonProjects/stock_price_predictor/AMZN.csv', engine = 'python')
+dates = df.index.values
+closing_price = df['Close'].values
 
-for row in df:
-
-	dates = df.Date.values
-	closing_price.append(df.Close)
-
-
-for i in dates:
-	dates.append(int(row[0]).split('/')[0])
-
-
-
+closing_price.reshape(1, -1)
 
 def predict_price(dates, closing_price, x):
 
@@ -51,13 +40,5 @@ def predict_price(dates, closing_price, x):
 
 predicted_price = predict_price(dates, closing_price, 29)
 print(predicted_price)
-
-
-# dates = df.Date.values
-# closing_price = df.Close.values
-# print(dates)
-# print(closing_price)
-
-
 
 
